@@ -1,0 +1,14 @@
+version: "3.2"
+services:
+  "2048":
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: jagdev/2048:24.4.0
+    hostname: "2048"
+    container_name: "2048"
+    environment:
+      - LOGLEVEL=INFO
+    ports:
+      - 8080:80
+    command: ["nginx", "-g", "daemon off;"]
