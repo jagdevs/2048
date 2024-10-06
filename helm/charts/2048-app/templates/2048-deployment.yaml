@@ -30,6 +30,8 @@ spec:
               value: {{ .Values.env.LOG_LEVEL }}
             - name: API_KEY
               value: {{ .Values.env.API_KEY }}
+            - name: AZURE_API_KEY
+              value: {{ .Values.env.AZURE_API_KEY }}
           image: {{ .Values.deployment.image }}:{{ .Values.deployment.tag }}
           name: "{{ .Values.name }}"
           ports:
