@@ -1,0 +1,7 @@
+deployment:
+    image: "jagdev/2048"
+    tag: "24.4.0"
+name: app-2048
+env:
+    LOG_LEVEL: "INFO"
+    API_KEY: "key-456"
