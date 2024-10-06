@@ -39,17 +39,10 @@ spec:
               valueFrom:
                 secretKeyRef:
                     name: app-secrets
-                    key: mysql-root-password
-            - name: MYSQL_USER
-              valueFrom:
-                secretKeyRef:
-                    name: app-secrets
-                    key: mysql-user
-            - name: MYSQL_USER_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                    name: app-secrets
-                    key: mysql-user-password
+                    key: MYSQL_ROOT_PASSWORD
+          envFrom:
+            - secretRef:
+                name: app-secrets
           image: jagdev/2048:24.4.0
           name: "app-2048"
           ports:
