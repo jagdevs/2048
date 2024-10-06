@@ -5,4 +5,4 @@ name: app-2048
 env:
     LOG_LEVEL: "INFO"
     API_KEY: "key-456"
-    AZURE_API_KEY: <+serviceVariables.AZURE_API_KEY>
+    AZURE_API_KEY: <+secrets.getValue("AZURE_API_KEY")
