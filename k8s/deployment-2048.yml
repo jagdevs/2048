@@ -31,6 +31,25 @@ spec:
               value: INFO
             - name: API_KEY
               value: key-456
+            - name: ENVIRONMENT
+              value: dev
+            - name: AZURE_API_KEY
+              value: "{{ .Values.env.AZURE_API_KEY }}"
+            - name: MYSQL_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                    name: app-secrets
+                    key: mysql-root-password
+            - name: MYSQL_USER
+              valueFrom:
+                secretKeyRef:
+                    name: app-secrets
+                    key: mysql-user
+            - name: MYSQL_USER_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                    name: app-secrets
+                    key: mysql-user-password
           image: jagdev/2048:24.4.0
           name: "app-2048"
           ports:
