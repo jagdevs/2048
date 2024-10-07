@@ -6,3 +6,6 @@ env:
     LOG_LEVEL: "INFO"
     API_KEY: "key-456"
     AZURE_API_KEY: <+secrets.getValue("AZURE_API_KEY")
+    MYSQL_ROOT_PASSWORD: "rootpassword"
+    MYSQL_USER: "jagdev"
+    MYSQL_USER_PASSWORD: "pass123"
