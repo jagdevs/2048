@@ -9,3 +9,4 @@ env:
     MYSQL_ROOT_PASSWORD: <+secrets.getValue("MYSQL_ROOT_PASSWORD")>
     MYSQL_USER: "jagdev"
     MYSQL_USER_PASSWORD: "pass123"
+    RUN_ENV: "DEV"
