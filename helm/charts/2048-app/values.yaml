@@ -10,3 +10,9 @@ env:
     MYSQL_USER: "jagdev"
     MYSQL_USER_PASSWORD: "pass123"
     RUN_ENV: <+pipeline.variables.get("RUN_ENV")>
+
+serviceAccount:
+    create: true
+cloudAccountId: <+pipeline.variables.get("CLOUD_ACCOUNT_ID")>
+clusterName: <+pipeline.variables.get("CLUSTER_NAME")>
+
